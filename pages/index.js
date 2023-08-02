@@ -7,20 +7,27 @@ const App = () => {
 	function handleEditorDidMount(editor, monaco) {
 		// here is the editor instance
 		// you can store it in `useRef` for further usage
+		console.log(JSON.stringify(monaco.fontInfo));
 		console.log('hhh', editor, monaco);
 		editorRef.current = editor;
 	}
 
 	return (
-		<div className="p-4 bg-gray-50">
-			<h2 className="text-4xl text-center font-mono">Simple Notepad</h2>
+		<div className=" relative">
+			{/* <h2 className="block fixed text-2xl text-right text-white z-50 font-mono">
+				built by teja
+			</h2> */}
 			<Editor
-				height="90vh"
-				defaultLanguage="javascript"
+				height="100vh"
+				defaultLanguage="Markdown"
 				theme="vs-dark"
 				defaultValue="// some comment"
 				onMount={handleEditorDidMount}
-				className="border border-gray-300 rounded"
+				options={{
+					scrollBeyondLastLine: false,
+					fontSize: '30px',
+				}}
+				className="absolute top-0 left-0 right-0 bottom-0 rounded"
 			/>
 		</div>
 	);

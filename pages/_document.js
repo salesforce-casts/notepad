@@ -11,7 +11,7 @@ export default function Document() {
 			<script
 				defer
 				data-domain="iseditor.com"
-				src="http://data.salesforcecasts.com/js/script.js"
+				src="https://data.salesforcecasts.com/js/script.js"
 			></script>
 		</Html>
 	);

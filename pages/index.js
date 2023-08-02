@@ -7,8 +7,7 @@ const App = () => {
 	function handleEditorDidMount(editor, monaco) {
 		// here is the editor instance
 		// you can store it in `useRef` for further usage
-		console.log(JSON.stringify(monaco.fontInfo));
-		console.log('hhh', editor, monaco);
+
 		editorRef.current = editor;
 	}
 

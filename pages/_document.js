@@ -3,7 +3,12 @@ import { Html, Head, Main, NextScript } from 'next/document';
 export default function Document() {
 	return (
 		<Html lang="en">
-			<Head />
+			<Head>
+				<title>Free online notepad app</title>
+				<meta name="description">
+					Free online notepad app. No logn required. 100% FREE.
+				</meta>
+			</Head>
 			<body>
 				<Main />
 				<NextScript />

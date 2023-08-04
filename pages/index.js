@@ -17,9 +17,10 @@ const App = () => {
 			{/* Add your meta tags here */}
 			<Head>
 				<title>Free online notepad app</title>
-				<meta name="description">
-					Free online notepad app. No login required, 100% Free.
-				</meta>
+				<meta
+					name="description"
+					content="Free online notepad app. No login required, 100% Free."
+				/>
 				{/* Other meta tags */}
 			</Head>
 			{/* <h2 className="block fixed text-2xl text-right text-white z-50 font-mono">

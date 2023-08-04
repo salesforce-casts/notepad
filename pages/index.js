@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import Editor, { Monaco } from '@monaco-editor/react';
+import Head from 'next/head';
 
 const App = () => {
 	const editorRef = useRef(null);
@@ -13,6 +14,14 @@ const App = () => {
 
 	return (
 		<div className=" relative">
+			{/* Add your meta tags here */}
+			<Head>
+				<title>Free online notepad app</title>
+				<meta name="description">
+					Free online notepad app. No login required, 100% Free.
+				</meta>
+				{/* Other meta tags */}
+			</Head>
 			{/* <h2 className="block fixed text-2xl text-right text-white z-50 font-mono">
 				built by teja
 			</h2> */}

@@ -1,4 +1,6 @@
+import { Loader } from '@/components/loader';
 import useTextStore from '@/lib/text-store';
+import { onInput } from '@/lib/utils';
 import Editor from '@monaco-editor/react';
 import Head from 'next/head';
 import { useRef } from 'react';
@@ -12,9 +14,8 @@ const App = () => {
 
     editorRef.current = editor;
   }
-
   //   global hooks
-  const [text, setText] = useTextStore((s) => [s.text, s.setText]);
+  const [text] = useTextStore((s) => [s.text]);
 
   return (
     <div className=' relative'>
@@ -32,7 +33,7 @@ const App = () => {
 			</h2> */}
       <Editor
         height='100vh'
-        onChange={setText}
+        onChange={onInput}
         defaultLanguage='Markdown'
         theme='vs-dark'
         value={text}
@@ -43,6 +44,7 @@ const App = () => {
         }}
         className='absolute top-0 left-0 right-0 bottom-0 rounded'
       />
+      <Loader />
     </div>
   );
 };
